@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestPractice" verbose="1" parallel="tests" thread-count="2">
+    <test name="LoginTest">
+        <classes>
+            <class name="LoginTest">
+                <methods>
+                    <include name="invalidLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="LoginTest2">
+        <classes>
+            <class name="LoginTest">
+                <methods>
+                    <include name="invalidLoginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

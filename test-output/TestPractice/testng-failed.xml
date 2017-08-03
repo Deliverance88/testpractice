@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [TestPractice]">
+  <test name="LoginTest(failed)">
+    <groups>
+      <run>
+        <include name="homePage"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="LoginTest">
+        <methods>
+          <include name="fillPassword"/>
+          <include name="clickSigninButton"/>
+          <include name="setUp"/>
+          <include name="loadPage"/>
+          <include name="clickSubmitButton"/>
+          <include name="tearDown"/>
+          <include name="fillEmail"/>
+        </methods>
+      </class> <!-- LoginTest -->
+    </classes>
+  </test> <!-- LoginTest(failed) -->
+</suite> <!-- Failed suite [TestPractice] -->
