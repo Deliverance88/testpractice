@@ -29,29 +29,29 @@ public class LoginTest {
     }
 
     @Parameters({"language", "browser"})
-    @Test(groups = {"homePage"})
+    @Test(groups = {"homePage"}, enabled = false)
     public void loadPage(@Optional("en") String language, @Optional("Firefox") String browser) {
         System.out.println("Language: " + language);
         System.out.println("Browser: " + browser);
         mainPage.getPageUrl();
     }
 
-    @Test(dependsOnMethods = "loadPage", groups = {"homePage"})
+    @Test(dependsOnMethods = "loadPage", groups = {"homePage"},enabled = false)
     public void clickSigninButton() {
         mainPage.clickSignInButton();
     }
 
-    @Test(dependsOnMethods = "clickSigninButton", groups = {"homePage"})
+    @Test(dependsOnMethods = "clickSigninButton", groups = {"homePage"}, enabled = false)
     public void fillEmail() {
         loginPage.fillEmail("test@gmail.com");
     }
 
-    @Test(dependsOnMethods = "fillEmail", groups = {"homePage"})
+    @Test(dependsOnMethods = "fillEmail", groups = {"homePage"}, enabled = false)
     public void fillPassword() {
         loginPage.fillPassword("password1");
     }
 
-    @Test(dependsOnMethods = "fillPassword", groups = {"homePage"})
+    @Test(dependsOnMethods = "fillPassword", groups = {"homePage"}, enabled = false)
     public void clickSubmitButton() {
         loginPage.clickSubmitButton();
     }
